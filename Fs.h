@@ -28,7 +28,7 @@ namespace NSFs {
 	std::expected<CPath, std::error_code> WeaklyCanonical(const CPath& p);
 
 	std::expected<CPath, std::error_code> Relative(const CPath& p, const CPath& base);
-	std::expected<CPath, std::error_code> Proximate(const CPath& p, const CPath& base = CurrentPath());
+	std::expected<CPath, std::error_code> Proximate(const CPath& p, const CPath& base = fs::current_path());
 
 	std::expected<void, std::error_code> Copy(const CPath& from, const CPath& to, CCopyOptions options = CCopyOptions::none);
 
